@@ -4,7 +4,7 @@ public class FindDuplicate {
 
 	public static void main(String[] args) {
 		
-		//Initialize array   
+	//Initialize array   
         int [] arr = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3, 19, 19};   
           
         System.out.println("Duplicate elements in given array: ");  

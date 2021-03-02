@@ -2,18 +2,41 @@ package algorithms;
 
 public class FindDuplicate {
 
-	public static void main(String[] args) {
-		
-	//Initialize array   
-        int [] arr = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3, 19, 19};   
-          
-        System.out.println("Duplicate elements in given array: ");  
-        //Searches for duplicate element  
-        for(int i = 0; i < arr.length; i++) {  
-            for(int j = i + 1; j < arr.length; j++) {  
-                if(arr[i] == arr[j])  
-                    System.out.println(arr[j]);  
-            }  
-        }  
-	}
+    void printRepeating(int arr[], int size) {
+        int i;
+
+        System.out.println("The repeating elements are : ");
+
+        int max = size;
+        
+        for (i = 0; i < size; i++)
+        
+            if (arr[i] > max)
+            
+                max = arr[i];
+
+        
+        int[] arr_copy = new int[++max];
+        
+        for(i=0; i < size; i++)
+        
+            if (arr_copy[arr[i]] == 0)
+            
+                arr_copy[arr[i]] = arr[i];
+                
+            else
+            
+                System.out.println(arr[i]);
+                
+    }
+    public static void main(String []args){
+        
+        FindDuplicate duplicate = new FindDuplicate();
+
+        int arr[] = { 19, 2, 3, 1, 3, 6, 19, 6 };
+
+        int arr_size = arr.length;
+ 
+        duplicate.printRepeating(arr, arr_size);
+     }
 }
